@@ -49,6 +49,17 @@
 			<version>1.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- 
+		## NEED TOMCAT 7 FOR 5.0
+		<dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-validator</artifactId> 
+			<version>5.0.0.Final</version> <exclusions> <exclusion> <groupId>javax.el</groupId> <artifactId>javax.el-api</artifactId> 
+			</exclusion> <exclusion> <groupId>org.glassfish.web</groupId> <artifactId>javax.el</artifactId> 
+			</exclusion> </exclusions> </dependency> -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.3.2.Final</version>
+		</dependency>
 
 	</dependencies>
 	<build>
