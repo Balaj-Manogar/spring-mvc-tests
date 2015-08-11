@@ -18,5 +18,13 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+	
+	<bean id="injectBean" class="org.baali.InjectBean">
+		<constructor-arg value="Balaji. M"></constructor-arg>
+	</bean>
+	
+	<bean id="autoWiringInjectBean" class="org.baali.InjectBeanAutoWiring">
+		<constructor-arg value="Injecting by Auto wire"> </constructor-arg>
+	 </bean>
 
 </beans>
