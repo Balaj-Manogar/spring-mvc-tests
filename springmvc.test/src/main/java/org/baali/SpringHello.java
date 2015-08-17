@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -36,6 +37,15 @@ public class SpringHello
 		ModelAndView mv = new ModelAndView();
 		System.out.println("Model Attribute: " + m.getAuthor());
 		mv.setViewName("attribute");
+		return mv;
+	}
+	
+	@RequestMapping("request")
+	public ModelAndView requestBodyhandler(@RequestBody Book book)
+	{
+		ModelAndView mv = new ModelAndView();
+		System.out.println("RequestBody: " + book);
+		mv.setViewName("request");
 		return mv;
 	}
 }
