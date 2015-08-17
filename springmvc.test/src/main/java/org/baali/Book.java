@@ -7,6 +7,10 @@ public class Book
 	private String language;
 	private String author;
 	
+	public Book()
+	{
+		// TODO Auto-generated constructor stub
+	}
 	
 	public Book(int id, String title, String language, String author)
 	{
@@ -45,7 +49,7 @@ public class Book
 	}
 	public void setAuthor(String author)
 	{
-		author = author;
+		this.author = author;
 	}
 	
 	

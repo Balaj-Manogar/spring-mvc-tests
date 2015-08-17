@@ -26,5 +26,7 @@
 	<bean id="autoWiringInjectBean" class="org.baali.InjectBeanAutoWiring">
 		<constructor-arg value="Injecting by Auto wire"> </constructor-arg>
 	 </bean>
+	 
+	 
 
 </beans>

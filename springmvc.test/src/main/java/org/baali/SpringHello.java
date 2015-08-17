@@ -5,7 +5,9 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/mobile/*")
@@ -26,5 +28,14 @@ public class SpringHello
 		System.out.println(injectBean.getMessage());
 		System.out.println(autoInject.getMessage());
 		return "hello";
+	}
+	
+	@RequestMapping("attrib")
+	public ModelAndView attributeVsBody(@ModelAttribute("m") Book m)
+	{
+		ModelAndView mv = new ModelAndView();
+		System.out.println("Model Attribute: " + m.getAuthor());
+		mv.setViewName("attribute");
+		return mv;
 	}
 }
