@@ -3,11 +3,13 @@ package org.baali;
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -31,7 +33,7 @@ public class SpringHello
 		return "hello";
 	}
 	
-	@RequestMapping("attrib")
+	@RequestMapping(value="attrib")
 	public ModelAndView attributeVsBody(@ModelAttribute("m") Book m)
 	{
 		ModelAndView mv = new ModelAndView();
@@ -40,12 +42,18 @@ public class SpringHello
 		return mv;
 	}
 	
-	@RequestMapping("request")
-	public ModelAndView requestBodyhandler(@RequestBody Book book)
+	/**
+	 * 
+	 * @RequestBody annotation consumes and converts all the header body  
+	 * data as object.
+	 */
+	@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, value="request")
+	@ResponseBody
+	public String requestBodyhandler(@RequestBody Book book)
 	{
-		ModelAndView mv = new ModelAndView();
-		System.out.println("RequestBody: " + book);
-		mv.setViewName("request");
-		return mv;
+		
+		System.out.println("RequestBody: " + book.getAuthor());
+		
+		return "{\"r\" : \"Response generated from method\"}";
 	}
 }

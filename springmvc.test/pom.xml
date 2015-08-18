@@ -42,6 +42,7 @@
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>stax</groupId>
@@ -49,12 +50,31 @@
 			<version>1.0.1</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- 
-		## NEED TOMCAT 7 FOR 5.0
-		<dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-validator</artifactId> 
-			<version>5.0.0.Final</version> <exclusions> <exclusion> <groupId>javax.el</groupId> <artifactId>javax.el-api</artifactId> 
+		<!-- ## NEED TOMCAT 7 FOR 5.0 <dependency> <groupId>org.hibernate</groupId> 
+			<artifactId>hibernate-validator</artifactId> <version>5.0.0.Final</version> 
+			<exclusions> <exclusion> <groupId>javax.el</groupId> <artifactId>javax.el-api</artifactId> 
 			</exclusion> <exclusion> <groupId>org.glassfish.web</groupId> <artifactId>javax.el</artifactId> 
 			</exclusion> </exclusions> </dependency> -->
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+			<version>1.9.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.11</version>
+		</dependency>
+		
+
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>

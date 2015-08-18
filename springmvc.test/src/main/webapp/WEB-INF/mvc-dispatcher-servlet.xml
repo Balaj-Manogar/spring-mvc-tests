@@ -27,6 +27,10 @@
 		<constructor-arg value="Injecting by Auto wire"> </constructor-arg>
 	 </bean>
 	 
+	 <bean id="jsonConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+        <property name="prefixJson" value="false"/>
+        <property name="supportedMediaTypes" value="application/json"/>
+    </bean>
 	 
 
 </beans>
