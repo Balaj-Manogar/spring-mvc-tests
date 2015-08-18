@@ -4,14 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Attribute Form Result</title>
+<title>Request Body Result</title>
 </head>
 <body>
-<h3>Attribute form result</h3>
+<h3>Request Body Result</h3>
+<p>This will not get any result because @RequestBody converts request body to Object generally used for ajax requests </p>
+AA::${requestBody}::BB
 
-<b>id: </b>${book.id} <br />
-<b>title: </b>${book.title} <br />
-<b>language: </b>${book.language} <br />
-<b>author: </b>${book.author} <br />
 </body>
 </html>

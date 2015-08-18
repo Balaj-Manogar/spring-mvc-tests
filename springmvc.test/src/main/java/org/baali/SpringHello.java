@@ -56,4 +56,12 @@ public class SpringHello
 		
 		return "{\"r\" : \"Response generated from method\"}";
 	}
+	
+	@RequestMapping("requestBody")
+	public String requestBodyToView(@RequestBody String body, Model m)
+	{
+		m.addAttribute("requestBody", body);
+		System.out.println("Request Body: " + body);
+		return "request";
+	}
 }
